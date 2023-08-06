@@ -10,14 +10,14 @@ export  function middleware(request: NextRequest) {
 
     if(cookie){
     // console.log(cookie)
-    const getJwtSecrectKey=()=>{
-      const secrect = process.env.JWT_KEY as string;
+    // const getJwtSecrectKey=()=>{
+    //   const secrect = process.env.JWT_KEY as string;
 
-      if(!secrect||secrect.length===0){
-        throw new Error("JWT key not set")
-      }
-      return secrect;
-    }
+    //   if(!secrect||secrect.length===0){
+    //     throw new Error("JWT key not set")
+    //   }
+    //   return secrect;
+    // }
     // const key = {type:process.env.JWT_KEY as string};
     const token:JWT =  decodeJwt(cookie.value) as JWT;
     // console.log(token)
