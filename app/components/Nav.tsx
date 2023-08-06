@@ -1,6 +1,5 @@
 "use client"
 
-import React from "react"
 import { useParams } from 'next/navigation'
 import person from "@/public/person.svg"
 import Image from "next/image"
