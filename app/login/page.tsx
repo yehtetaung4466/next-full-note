@@ -22,7 +22,7 @@ export default function Login(){
             method:"post",
             body: JSON.stringify({
                 email,password
-            })
+            }),
          })
          const body:string = await response.json();
          if(response.ok){

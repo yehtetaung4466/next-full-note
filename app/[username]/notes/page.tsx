@@ -1,9 +1,13 @@
-import React from "react"
 import Note from "@/app/components/Note"
 import  {Note as N}  from "@/app/utils/type"
 
 async function getNotes(username:string) {
-    const res = await fetch(`http://localhost:3000/api/${username}/notes`,{cache:"no-store"})
+    const res = await fetch(`http://localhost:3000/api/${username}/notes`,{
+        cache:"no-store",
+        // next:{
+        //     revalidate:0,
+        // }
+    })
     const notes:N[] = await res.json();
     return notes
 }

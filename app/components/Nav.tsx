@@ -23,8 +23,8 @@ export default function Nav(){
     <div className=" w-full sticky top-0 bg-white shadow-sm border-b border-b-gray-200">
         <div className="  mx-2 sm:mx-auto max-w-6xl w-full h-12 flex justify-between items-center">
             <div className=" flex items-center">
-                <Link href={`/`} className=" font-medium text-lg"><span className=" text-primary font-semibold text-xl">My</span>notes
-                </Link>
+                <a href={`/`}  className=" font-medium text-lg"><span className=" text-primary font-semibold text-xl">My</span>notes
+                </a>
                 <Link href={`/${username}/create-note`} className=" ml-2 md:ml-4 lg:ml-5 cursor-pointer mt-1 text-accent hover:underline">
                     +notes
                 </Link>

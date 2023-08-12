@@ -35,9 +35,9 @@ export default function NoteDatail({params}:{params:{id:string,username:string}}
     }
     return(
         <div className=" w-10/12  mx-auto">
-            <Link href={`/${u_params.username}/notes`} className=" absolute top-16 left-26 rounded-full w-6 h-6 border shadow-md flex items-center justify-center hover:w-7 hover:h-7 cursor-pointer">
+            <a href={`/`} className=" absolute top-16 left-26 rounded-full w-6 h-6 border shadow-md flex items-center justify-center hover:w-7 hover:h-7 cursor-pointer">
                 &larr;
-            </Link>
+            </a>
             <input disabled={disable} type="text" onChange={
                 (e)=>{
                     // ok();

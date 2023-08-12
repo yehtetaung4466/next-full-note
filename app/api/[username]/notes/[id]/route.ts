@@ -28,7 +28,7 @@ export async function GET(request:NextRequest,{params}:{params:{id:string,userna
 }
 
 export async function DELETE(request:NextRequest,{params}:{params:{id:string,username:string}}){
-    const {id}=params;
+    const {id,username}=params;
     try{
         await connectDb();
     
@@ -40,7 +40,8 @@ export async function DELETE(request:NextRequest,{params}:{params:{id:string,use
     try{
         
         await noteModel.findByIdAndDelete({_id:id})
-        return NextResponse.json("Note Deleted")
+        // return NextResponse.redirect(new URL(`/${username}/notes`,request.url))
+        return NextResponse.json("ok")
 
     }catch(err){
         console.error(err);

@@ -23,7 +23,7 @@ export default  function SignupPage(){
             method:"post",
             body: JSON.stringify({
                 username,email,password
-            })
+            }),
          })
          const body:string = await response.json();
 

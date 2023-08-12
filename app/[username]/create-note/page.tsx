@@ -12,7 +12,7 @@ export default function CreateNote(){
 
     const create=async(e:React.FormEvent<HTMLFormElement>)=>{
         e.preventDefault();
-        const response = await fetch(`/api/${params.username}/create-note`,{
+        const response = await fetch(`/api/${params.username}/notes`,{
             headers:{
                 "Content-Type":"application/json"
             },
@@ -24,6 +24,8 @@ export default function CreateNote(){
          const r_body:string=await response.json();
          if(response.ok){
             setSuccess(r_body)
+            setTitle("")
+            setBody("")
             setTimeout(() => {
                 setSuccess("")
             }, 4000);
