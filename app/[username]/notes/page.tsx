@@ -2,7 +2,7 @@ import Note from "@/app/components/Note"
 import  {Note as N}  from "@/app/utils/type"
 
 async function getNotes(username:string) {
-    const res = await fetch(new URL(`/api/${username}/notes`,process.env.HOST||"https://next-full-note.vercel.app"),{
+    const res = await fetch(`${process.env.HOST}/api/${username}/notes`,{
         cache:"no-store",
         
     })
