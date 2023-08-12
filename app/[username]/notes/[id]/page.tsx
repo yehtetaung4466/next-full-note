@@ -2,7 +2,6 @@
 
 import {useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Link from "next/link";
 import { Note } from "@/app/utils/type";
 export default function NoteDatail({params}:{params:{id:string,username:string}}){
     const u_params=useParams();
