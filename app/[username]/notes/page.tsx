@@ -27,7 +27,7 @@ export default async function NotePage({params}:{params:{username:string}}){
             );
         }else{
             return(
-                <div className=" mt-56 text-3xl font-semibold text-gray-400 text-center">No note at the moment</div>
+                <div className=" mt-64 text-3xl font-semibold text-gray-400 text-center">No note at the moment</div>
             )
         }
     } catch (error) {
